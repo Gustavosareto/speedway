@@ -4,24 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SpeedWay — Guincho 24h e Transporte de Veículos em SC</title>
-<meta name="description" content="Guincho leve e pesado, transporte de longa distância e atendimento 24 horas em toda Santa Catarina. Atendimento rápido, seguro e com o melhor preço. Chame agora.">
+<meta name="description" content="Guincho leve e pesado, transporte de longa distância e atendimento 24 horas em Balneário Camboriú, Camboriú, Itapema e Itajaí. Atendimento rápido, seguro e com o melhor preço. Chame agora.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#080B12;
-    --bg-2:#0B0F18;
-    --panel:#11161F;
-    --panel-2:#161C28;
+    --bg:#050505;
+    --bg-2:#0A0A0A;
+    --panel:#121212;
+    --panel-2:#1A1A1A;
     --line:rgba(255,255,255,.07);
     --line-2:rgba(255,255,255,.13);
-    --red:#E1232B;
-    --red-2:#F5333B;
-    --red-dark:#A30F16;
-    --blue:#2563EB;
-    --blue-2:#3B82F6;
+    --red:#F97316;
+    --red-2:#FB923C;
+    --red-dark:#C2410C;
+    --blue:#EA580C;
+    --blue-2:#F97316;
     --gold:#FBBF24;
     --text:#F3F5F9;
     --muted:#98A2B3;
@@ -64,7 +64,7 @@
     white-space:nowrap;
   }
   .btn svg{width:20px;height:20px;flex:none}
-  .btn-red{background:var(--red);color:#fff;box-shadow:0 14px 34px -14px rgba(225,35,43,.85)}
+  .btn-red{background:var(--red);color:#fff;box-shadow:0 14px 34px -14px rgba(249,115,22,.85)}
   .btn-red:hover{background:var(--red-2);transform:translateY(-2px)}
   .btn-ghost{background:transparent;color:var(--text);border-color:var(--line-2)}
   .btn-ghost:hover{border-color:#fff;transform:translateY(-2px)}
@@ -72,12 +72,12 @@
   .btn-block{width:100%}
 
   /* ===== HEADER ===== */
-  header{position:sticky;top:0;z-index:60;background:rgba(8,11,18,.86);
+  header{position:sticky;top:0;z-index:60;background:rgba(5,5,5,.88);
     backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
   .logo{display:flex;align-items:center;gap:12px}
   .logo .mark{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;flex:none;
-    background:linear-gradient(135deg,var(--red),#82080f);box-shadow:0 10px 24px -10px rgba(225,35,43,.9)}
+    background:linear-gradient(135deg,var(--red),#9A3412);box-shadow:0 10px 24px -10px rgba(249,115,22,.9)}
   .logo .mark svg{width:24px;height:24px}
   .logo .txt b{font-family:"Sora";font-weight:800;font-size:1.05rem;letter-spacing:.01em;display:block;line-height:1.05}
   .logo .txt span{font-family:"Inter";font-weight:600;font-size:.56rem;letter-spacing:.3em;
@@ -92,8 +92,8 @@
 
   /* ===== HERO ===== */
   .hero{position:relative;overflow:hidden;background:
-      radial-gradient(820px 560px at 86% 36%, rgba(225,35,43,.22), transparent 60%),
-      radial-gradient(700px 520px at 4% 8%, rgba(37,99,235,.10), transparent 58%),
+      radial-gradient(820px 560px at 86% 36%, rgba(249,115,22,.22), transparent 60%),
+      radial-gradient(700px 520px at 4% 8%, rgba(249,115,22,.10), transparent 58%),
       var(--bg);
   }
   .hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
@@ -117,7 +117,7 @@
 
   .hero-art{position:relative;display:grid;place-items:center}
   .hero-art .glow{position:absolute;width:86%;height:70%;left:50%;top:50%;transform:translate(-50%,-50%);
-    background:radial-gradient(circle,rgba(225,35,43,.35),transparent 66%);filter:blur(26px);z-index:0}
+    background:radial-gradient(circle,rgba(249,115,22,.35),transparent 66%);filter:blur(26px);z-index:0}
   .hero-art img{position:relative;z-index:1;width:100%;max-width:600px;height:auto;
     filter:drop-shadow(0 34px 44px rgba(0,0,0,.6))}
 
@@ -131,30 +131,31 @@
   .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
     padding:30px 26px;transition:transform .18s ease,border-color .18s ease;
     display:flex;flex-direction:column;text-align:left}
-  .card:hover{transform:translateY(-6px);border-color:rgba(37,99,235,.5)}
+  .card:hover{transform:translateY(-6px);border-color:rgba(249,115,22,.5)}
   .card .ic{width:58px;height:58px;border-radius:15px;display:grid;place-items:center;margin-bottom:22px;
-    background:linear-gradient(135deg,var(--blue-2),var(--blue));box-shadow:0 14px 30px -14px rgba(37,99,235,.8)}
+    background:linear-gradient(135deg,var(--blue-2),var(--blue));box-shadow:0 14px 30px -14px rgba(249,115,22,.8)}
   .card .ic svg{width:28px;height:28px;color:#fff}
   .card h3{font-size:1.14rem;font-weight:700;margin-bottom:11px}
   .card p{font-size:.93rem;color:var(--muted);flex:1}
 
-  /* ===== COMO FUNCIONA ===== */
-  .como{background:var(--bg)}
-  .como-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
-  .como-head .sec-title{margin-bottom:12px}
-  .como-head p{color:var(--muted);max-width:460px}
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:64px;position:relative}
-  .steps::before{content:"";position:absolute;top:38px;left:12%;right:12%;height:0;
-    border-top:2px dashed rgba(255,255,255,.16);z-index:0}
-  .step{position:relative;z-index:1;text-align:center;display:flex;flex-direction:column;align-items:center}
-  .step .node{width:78px;height:78px;border-radius:50%;display:grid;place-items:center;
-    background:var(--panel-2);border:1px solid var(--line-2);margin-bottom:20px;position:relative}
-  .step .node svg{width:32px;height:32px;color:#9aa3b3}
-  .step .num{font-family:"Sora";font-weight:800;font-size:1.75rem;color:rgba(225,35,43,.14);
-    -webkit-text-stroke:2px var(--red);text-shadow:0 0 12px rgba(225,35,43,.25);
-    line-height:1;margin-bottom:8px;display:block}
-  .step h3{font-size:1.08rem;font-weight:700;margin-bottom:7px}
-  .step p{font-size:.88rem;color:var(--muted);max-width:220px}
+
+  /* ===== MISSÃO ===== */
+  .missao{background:var(--bg);position:relative;overflow:hidden}
+  .missao::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:radial-gradient(680px 420px at 50% -10%, rgba(249,115,22,.14), transparent 60%)}
+  .missao .wrap{position:relative;z-index:1}
+  .mission-text{max-width:760px;margin:22px auto 0;font-size:clamp(1.05rem,2vw,1.28rem);
+    color:#d6dbe4;line-height:1.7}
+  .mission-text strong{color:var(--red-2);font-weight:700}
+  .mission-values{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+  .mv{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:32px 26px;text-align:center;transition:transform .18s ease,border-color .18s ease}
+  .mv:hover{transform:translateY(-6px);border-color:rgba(249,115,22,.5)}
+  .mv .mv-ic{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;margin:0 auto 18px;
+    background:rgba(249,115,22,.12);border:1.5px solid var(--line-2)}
+  .mv .mv-ic svg{width:28px;height:28px;color:var(--red-2)}
+  .mv b{font-family:"Sora";font-weight:700;font-size:1.14rem;display:block;margin-bottom:6px}
+  .mv span{font-size:.92rem;color:var(--muted)}
 
   /* ===== QUALIDADE ===== */
   .qualidade{background:var(--bg-2)}
@@ -168,11 +169,52 @@
   .quality-item h3{font-size:1.12rem;font-weight:700;margin-bottom:5px}
   .quality-item p{font-size:.9rem;color:var(--muted)}
 
+  /* ===== GALERIA ===== */
+  .gallery{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%)}
+  .masonry{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
+  .g-item{display:block;width:100%;margin:0;padding:0;aspect-ratio:4/3;
+    position:relative;border-radius:14px;overflow:hidden;cursor:pointer;
+    background:var(--panel);border:1px solid var(--line);line-height:0}
+  .g-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .g-item::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.72));opacity:0;transition:opacity .3s}
+  .g-item .cap{position:absolute;left:16px;bottom:14px;z-index:2;display:flex;align-items:center;gap:8px;
+    font-family:"Sora";font-weight:700;font-size:.9rem;color:#fff;opacity:0;transform:translateY(8px);
+    transition:opacity .3s,transform .3s;line-height:1.2;text-align:left}
+  .g-item .cap svg{width:17px;height:17px;color:var(--red-2);flex:none}
+  .g-zoom{position:absolute;top:12px;right:12px;z-index:2;width:36px;height:36px;border-radius:10px;
+    background:rgba(5,5,5,.55);backdrop-filter:blur(4px);display:grid;place-items:center;
+    opacity:0;transition:opacity .3s}
+  .g-zoom svg{width:18px;height:18px;color:#fff}
+  .g-item:hover img{transform:scale(1.07)}
+  .g-item:hover::after{opacity:1}
+  .g-item:hover .cap,.g-item:hover .g-zoom{opacity:1}
+  .g-item:hover .cap{transform:none}
+  .g-item:focus-visible{outline:2px solid var(--red-2);outline-offset:2px}
+
+  /* lightbox */
+  .lightbox{position:fixed;inset:0;z-index:120;background:rgba(0,0,0,.94);backdrop-filter:blur(6px);
+    display:none;align-items:center;justify-content:center;padding:30px}
+  .lightbox.open{display:flex}
+  .lightbox .lb-img{max-width:92vw;max-height:85vh;width:auto;height:auto;border-radius:12px;
+    box-shadow:var(--shadow);object-fit:contain}
+  .lb-btn{position:absolute;background:rgba(255,255,255,.1);border:1px solid var(--line-2);color:#fff;
+    width:52px;height:52px;border-radius:50%;cursor:pointer;display:grid;place-items:center;
+    transition:background .2s,transform .15s;z-index:2}
+  .lb-btn:hover{background:var(--red);transform:scale(1.05)}
+  .lb-btn svg{width:24px;height:24px}
+  .lb-close{top:22px;right:22px}
+  .lb-prev{left:20px;top:50%;transform:translateY(-50%)}
+  .lb-next{right:20px;top:50%;transform:translateY(-50%)}
+  .lb-prev:hover,.lb-next:hover{transform:translateY(-50%) scale(1.05)}
+  .lb-count{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:var(--muted);
+    font-size:.85rem;font-family:"Sora";font-weight:600}
+
   /* ===== REGIÃO + DEPOIMENTOS ===== */
   .reg-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:30px;align-items:stretch}
   .region-card{position:relative;border-radius:20px;overflow:hidden;padding:44px 40px;min-height:380px;
     display:flex;flex-direction:column;justify-content:flex-end;
-    background:linear-gradient(150deg,#1d4ed8 0%,#5b21b6 52%,#9d174d 100%);box-shadow:var(--shadow)}
+    background:linear-gradient(150deg,#F97316 0%,#C2410C 52%,#1A1A1A 100%);box-shadow:var(--shadow)}
   .region-card .eyebrow{color:rgba(255,255,255,.8)}
   .region-card h3{font-size:2.3rem;font-weight:800;color:#fff;margin-bottom:14px}
   .region-card p{color:rgba(255,255,255,.9);max-width:330px;font-size:.96rem}
@@ -198,7 +240,7 @@
   .q button{width:100%;background:none;border:none;color:var(--text);cursor:pointer;
     display:flex;align-items:center;justify-content:space-between;gap:16px;
     padding:18px 20px;font-family:"Sora";font-weight:600;font-size:1rem;text-align:left}
-  .q .ico{flex:none;width:26px;height:26px;border-radius:7px;background:rgba(225,35,43,.14);
+  .q .ico{flex:none;width:26px;height:26px;border-radius:7px;background:rgba(249,115,22,.14);
     display:grid;place-items:center;transition:transform .25s ease;color:var(--red-2);font-weight:700;font-size:1.2rem}
   .q.open .ico{transform:rotate(45deg)}
   .q .ans{max-height:0;overflow:hidden;transition:max-height .3s ease}
@@ -207,7 +249,7 @@
   .cta-card{background:linear-gradient(165deg,var(--panel-2),var(--panel));border:1px solid var(--line);
     border-radius:20px;padding:40px 34px;text-align:center;box-shadow:var(--shadow)}
   .cta-card .ring{width:92px;height:92px;border-radius:50%;margin:0 auto 24px;display:grid;place-items:center;
-    background:var(--red);box-shadow:0 0 0 10px rgba(225,35,43,.16),0 18px 40px -14px rgba(225,35,43,.8)}
+    background:var(--red);box-shadow:0 0 0 10px rgba(249,115,22,.16),0 18px 40px -14px rgba(249,115,22,.8)}
   .cta-card .ring svg{width:40px;height:40px;color:#fff}
   .cta-card h3{font-size:1.7rem;font-weight:800;margin-bottom:8px}
   .cta-card p{color:var(--muted);margin-bottom:26px}
@@ -217,7 +259,7 @@
   .cta-mini div span{font-size:.78rem;color:var(--muted)}
 
   /* ===== FOOTER ===== */
-  footer{background:#06080D;border-top:1px solid var(--line)}
+  footer{background:#000000;border-top:1px solid var(--line)}
   .foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:40px;padding:60px 0 44px}
   .foot p{color:var(--muted);font-size:.92rem;max-width:300px;margin-top:18px}
   .foot h4{font-family:"Sora";font-weight:700;font-size:1rem;margin-bottom:20px;color:#fff}
@@ -228,9 +270,11 @@
   .foot .contact div{display:flex;align-items:center;gap:11px;color:var(--muted);margin-bottom:14px;font-size:.93rem}
   .foot .contact svg{width:18px;height:18px;color:var(--red-2);flex:none}
   .socials{display:flex;gap:12px;margin-top:22px}
-  .socials a{width:42px;height:42px;border-radius:11px;background:var(--red);display:grid;place-items:center}
+  .socials a{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;transition:transform .2s ease,filter .2s ease}
   .socials a svg{width:20px;height:20px;color:#fff}
-  .socials a:hover{background:var(--red-dark)}
+  .socials a.ig{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}
+  .socials a.wa{background:#25d366}
+  .socials a:hover{transform:translateY(-2px);filter:brightness(1.05)}
   .copy{border-top:1px solid var(--line);padding:22px 0;display:flex;justify-content:space-between;
     flex-wrap:wrap;gap:8px;color:var(--muted);font-size:.84rem}
   .copy .heart{color:var(--red-2)}
@@ -270,14 +314,20 @@
     .hero-grid{grid-template-columns:1fr;gap:26px;padding:34px 0 50px}
     .hero-art{max-width:430px;margin:0 auto;order:2}
     .hero p.lead{margin-bottom:26px}
+    .masonry{grid-template-columns:repeat(2,1fr)}
   }
   @media(max-width:620px){
     .wrap{padding:0 20px}
     .pad{padding:54px 0}
     .cards{grid-template-columns:1fr;gap:16px;margin-top:34px}
+    .mission-values{grid-template-columns:1fr;gap:14px;margin-top:34px}
     .steps{grid-template-columns:1fr;gap:28px;margin-top:38px}
     .review-grid{grid-template-columns:1fr;gap:14px;margin-top:26px}
+    .masonry{gap:12px;margin-top:34px}
+    .g-item .cap{opacity:1;transform:none;font-size:.78rem}
+    .g-item::after{opacity:1}
     .faq-grid{gap:30px}
+    .foot{grid-template-columns:1fr;gap:30px;padding:48px 0 36px}
     .callbar{display:grid}
     body{padding-bottom:60px}
     .sec-title{font-size:clamp(1.65rem,7vw,2.1rem)}
@@ -329,16 +379,12 @@
     <nav class="links" aria-label="Navegação principal">
       <a href="#topo">Início</a>
       <a href="#servicos">Serviços</a>
-      <a href="#como">Como funciona</a>
+      <a href="#galeria">Galeria</a>
       <a href="#sobre">Sobre nós</a>
       <a href="#contato">Contato</a>
     </nav>
 
     <div class="nav-cta">
-      <a href="tel:+5511994721326" class="btn btn-red btn-sm">
-        <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2 1c1 2 3 4 5 5l1-2 5 2v3c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
-        <span class="btn-phone-text">(11) 9 9472-1326</span>
-      </a>
       <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
@@ -347,7 +393,7 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#topo">Início</a>
     <a href="#servicos">Serviços</a>
-    <a href="#como">Como funciona</a>
+    <a href="#galeria">Galeria</a>
     <a href="#sobre">Sobre nós</a>
     <a href="#contato">Contato</a>
   </div>
@@ -359,9 +405,9 @@
     <div>
       <span class="pill"><span class="dot" aria-hidden="true"></span>Atendimento 24h</span>
       <h1>Precisou de guincho?<br><span class="red">A gente resolve.</span></h1>
-      <p class="lead">Atendimento rápido, seguro e com o melhor preço. Estamos prontos para te ajudar 24 horas, esteja onde estiver na cidade. Atendemos toda a região de Santa Catarina.</p>
+      <p class="lead">Atendimento rápido, seguro e com o melhor preço. Estamos prontos para te ajudar 24 horas em Balneário Camboriú, Camboriú, Itapema e Itajaí.</p>
       <div class="hero-cta">
-        <a href="https://wa.me/5511994721326" class="btn btn-red" target="_blank" rel="noopener">
+        <a href="https://wa.me/554796816589" class="btn btn-red" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.2.1.4.1.6-.1l.8-.9c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4.1.2.1.7-.1 1.4Z"/></svg>
           Chamar no WhatsApp
         </a>
@@ -375,7 +421,7 @@
 
     <div class="hero-art">
       <span class="glow" aria-hidden="true"></span>
-      <img src="caminhao-hero.png" alt="Caminhão guincho plataforma transportando um carro" width="600" height="400" fetchpriority="high">
+      <img src="img/caminhao-hero.png" alt="Caminhão guincho plataforma transportando um carro" width="600" height="400" fetchpriority="high">
     </div>
   </div>
 </section>
@@ -390,18 +436,18 @@
     <div class="cards">
       <article class="card">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 13l1.5-5h9v5M13 13h4l3 3v1M3 13v4M3 17h2m12 0h2" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" stroke="#fff" stroke-width="1.7"/><circle cx="17" cy="18" r="2" stroke="#fff" stroke-width="1.7"/></svg></span>
-        <h3>Guincho leve e pesado</h3>
-        <p>Atendemos carros, motos, vans e caminhões com rapidez e total segurança.</p>
+        <h3>Guincho 24h</h3>
+        <p>Atendimento rápido e eficiente, a qualquer hora do dia ou da noite.</p>
       </article>
       <article class="card">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18c-3 0-5-1.3-5-3.5S6 11 9 11h6c2 0 3.5-1 3.5-2.5S16 6 14 6H7" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 4 7 6 5 8" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="18" r="2.2" stroke="#fff" stroke-width="1.7"/></svg></span>
-        <h3>Transporte longa distância</h3>
-        <p>Levamos seu veículo para qualquer lugar do Brasil com segurança e eficiência.</p>
+        <h3>Veículos e bens especiais</h3>
+        <p>Transporte com segurança para cada tipo de carga, do início ao fim do trajeto.</p>
       </article>
       <article class="card">
-        <span class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.7"/><path d="M12 7v5l3.5 2" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <h3>Atendimento 24 horas</h3>
-        <p>Disponíveis todos os dias, inclusive finais de semana e feriados.</p>
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.6 5.3 5.8.8-4.2 4.1 1 5.8L12 16.3 6.8 19l1-5.8L3.6 9.1l5.8-.8L12 3Z" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+        <h3>Todos os tipos de veículos</h3>
+        <p>Populares, premium, luxo e clássicos transportados com o mesmo cuidado.</p>
       </article>
       <article class="card">
         <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 5 6v5c0 4.4 3 8 7 10 4-2 7-5.6 7-10V6l-7-3Z" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -412,48 +458,77 @@
   </div>
 </section>
 
-<!-- ===================== COMO FUNCIONA ===================== -->
-<section class="como pad" id="como">
-  <div class="wrap">
-    <div class="como-head">
-      <div>
-        <span class="eyebrow">Como funciona</span>
-        <h2 class="sec-title">É rápido, fácil<br>e sem complicação.</h2>
-        <p>Da sua ligação até o veículo no destino, você acompanha cada etapa do atendimento.</p>
-      </div>
-    </div>
+<!-- ===================== GALERIA ===================== -->
+<section class="gallery pad" id="galeria">
+  <div class="wrap center">
+    <span class="eyebrow">Galeria</span>
+    <h2 class="sec-title">Veja o nosso trabalho</h2>
+    <p class="sec-sub">Carros de passeio, esportivos e de competição transportados com segurança em Balneário Camboriú, Camboriú, Itapema e Itajaí.</p>
 
-    <div class="steps">
-      <div class="step">
-        <span class="node"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2 1c1 2 3 4 5 5l1-2 5 2v3c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
-        <span class="num">01</span>
-        <h3>Você chama</h3>
-        <p>Ligue ou mande mensagem no WhatsApp.</p>
+    <div class="masonry" id="masonry">
+      <button type="button" class="g-item">
+        <img src="img/WhatsApp-Image-2026-06-21-at-12.50.00.webp" alt="Guincho SpeedWay transportando carro de competição" loading="lazy">
+        <span class="g-zoom"><svg viewBox="0 0 24 24" fill="none"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM21 21l-5-5M11 8v6M8 11h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span class="cap"><svg viewBox="0 0 24 24" fill="none"><path d="M3 13l1.5-5h9v5M13 13h4l3 3v1M3 13v4" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/></svg>Carro de competição</span>
+      </button>
+      <button type="button" class="g-item">
+        <img src="img/WhatsApp-Image-2026-06-21-at-12.49.59-_1_.webp" alt="Guincho SpeedWay transportando Mercedes-Benz G63" loading="lazy">
+        <span class="g-zoom"><svg viewBox="0 0 24 24" fill="none"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM21 21l-5-5M11 8v6M8 11h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span class="cap"><svg viewBox="0 0 24 24" fill="none"><path d="M3 13l1.5-5h9v5M13 13h4l3 3v1M3 13v4" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/></svg>SUV de luxo</span>
+      </button>
+      <button type="button" class="g-item">
+        <img src="img/WhatsApp-Image-2026-06-21-at-12.49.59.webp" alt="Guincho SpeedWay em posto com carro de competição" loading="lazy">
+        <span class="g-zoom"><svg viewBox="0 0 24 24" fill="none"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM21 21l-5-5M11 8v6M8 11h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span class="cap"><svg viewBox="0 0 24 24" fill="none"><path d="M3 13l1.5-5h9v5M13 13h4l3 3v1M3 13v4" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/></svg>Veículo esportivo</span>
+      </button>
+      <button type="button" class="g-item">
+        <img src="img/WhatsApp-Image-2026-06-21-at-12.49.59-_2_.webp" alt="Guincho SpeedWay transportando esportivo de luxo" loading="lazy">
+        <span class="g-zoom"><svg viewBox="0 0 24 24" fill="none"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM21 21l-5-5M11 8v6M8 11h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span class="cap"><svg viewBox="0 0 24 24" fill="none"><path d="M3 13l1.5-5h9v5M13 13h4l3 3v1M3 13v4" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/></svg>Esportivo de luxo</span>
+      </button>
+      <button type="button" class="g-item">
+        <img src="img/WhatsApp-Image-2026-06-21-at-12.50.00-_1_.webp" alt="Guincho SpeedWay transportando Porsche 911" loading="lazy">
+        <span class="g-zoom"><svg viewBox="0 0 24 24" fill="none"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM21 21l-5-5M11 8v6M8 11h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span class="cap"><svg viewBox="0 0 24 24" fill="none"><path d="M3 13l1.5-5h9v5M13 13h4l3 3v1M3 13v4" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/></svg>Porsche 911</span>
+      </button>
+      <button type="button" class="g-item">
+        <img src="img/WhatsApp-Image-2026-06-21-at-13.08.02.webp" alt="Guincho SpeedWay transportando picape à noite" loading="lazy">
+        <span class="g-zoom"><svg viewBox="0 0 24 24" fill="none"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM21 21l-5-5M11 8v6M8 11h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+        <span class="cap"><svg viewBox="0 0 24 24" fill="none"><path d="M3 13l1.5-5h9v5M13 13h4l3 3v1M3 13v4" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/></svg>Picape 4x4</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MISSÃO ===================== -->
+<section class="missao pad" id="sobre">
+  <div class="wrap center">
+    <span class="eyebrow">Nossa missão</span>
+    <h2 class="sec-title">Mais do que um guincho, um compromisso</h2>
+    <p class="mission-text">Nosso compromisso vai além do atendimento: entregamos <strong>tranquilidade, rapidez e confiança</strong>. Com equipamentos modernos e equipe experiente, garantimos eficiência máxima. Superamos expectativas e criamos laços de confiança com cada cliente.</p>
+
+    <div class="mission-values">
+      <div class="mv">
+        <span class="mv-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.4-7 10-7 10Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+        <b>Tranquilidade</b>
+        <span>Você relaxa, a gente resolve do começo ao fim.</span>
       </div>
-      <div class="step">
-        <span class="node"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 11v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="8" r="1.2" fill="currentColor"/></svg></span>
-        <span class="num">02</span>
-        <h3>Informações</h3>
-        <p>Conte onde está e o tipo de veículo.</p>
+      <div class="mv">
+        <span class="mv-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+        <b>Rapidez</b>
+        <span>Chegada ágil e eficiência máxima em cada chamado.</span>
       </div>
-      <div class="step">
-        <span class="node"><svg viewBox="0 0 24 24" fill="none"><path d="M3 13l1.5-5h9v5M13 13h4l3 3v1M3 13v4" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/></svg></span>
-        <span class="num">03</span>
-        <h3>Enviamos o guincho</h3>
-        <p>A unidade mais próxima vai até você.</p>
-      </div>
-      <div class="step">
-        <span class="node"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="m8 12 2.5 2.5L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <span class="num">04</span>
-        <h3>Problema resolvido</h3>
-        <p>Seu veículo no destino com segurança.</p>
+      <div class="mv">
+        <span class="mv-ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 5 6v5c0 4.4 3 8 7 10 4-2 7-5.6 7-10V6l-7-3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <b>Confiança</b>
+        <span>Laços construídos com cada cliente que atendemos.</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ===================== QUALIDADE ===================== -->
-<section class="qualidade pad" id="sobre">
+<section class="qualidade pad">
   <div class="wrap center">
     <span class="eyebrow">Por que escolher a gente</span>
     <h2 class="sec-title">Qualidade que faz a diferença</h2>
@@ -488,9 +563,9 @@
 <section class="pad">
   <div class="wrap reg-grid">
     <aside class="region-card">
-      <span class="eyebrow">Atendemos toda a</span>
-      <h3>Santa Catarina</h3>
-      <p>Estamos presentes em toda a região de SC, prontos para te atender 24 horas com rapidez e total segurança.</p>
+      <span class="eyebrow">Atendemos</span>
+      <h3>Balneário Camboriú, Camboriú, Itapema e Itajaí</h3>
+      <p>Estamos presentes em Balneário Camboriú, Camboriú, Itapema e Itajaí, prontos para te atender 24 horas com rapidez e total segurança.</p>
     </aside>
 
     <div class="reviews-head">
@@ -502,21 +577,21 @@
           <span class="quote" aria-hidden="true">&rdquo;</span>
           <p>Atendimento rápido e profissional. Chegaram em menos de 30 minutos!</p>
           <span class="who">Carlos M.</span>
-          <span class="city">Florianópolis - SC</span>
+          <span class="city">Balneário Camboriú - SC</span>
           <span class="stars" aria-label="5 de 5 estrelas">★★★★★</span>
         </div>
         <div class="review">
           <span class="quote" aria-hidden="true">&rdquo;</span>
           <p>Excelente serviço! Transportaram meu carro com total segurança.</p>
           <span class="who">Juliana S.</span>
-          <span class="city">Joinville - SC</span>
+          <span class="city">Itajaí - SC</span>
           <span class="stars" aria-label="5 de 5 estrelas">★★★★★</span>
         </div>
         <div class="review">
           <span class="quote" aria-hidden="true">&rdquo;</span>
           <p>Precisei de madrugada e fui muito bem atendido. Recomendo!</p>
           <span class="who">Rafael T.</span>
-          <span class="city">Blumenau - SC</span>
+          <span class="city">Itapema - SC</span>
           <span class="stars" aria-label="5 de 5 estrelas">★★★★★</span>
         </div>
       </div>
@@ -538,8 +613,8 @@
           <div class="ans"><p>O tempo varia conforme sua localização e o trânsito, mas trabalhamos para chegar o mais rápido possível. Ao confirmar o chamado passamos uma estimativa de chegada.</p></div>
         </div>
         <div class="q">
-          <button aria-expanded="false">Vocês atendem em quais regiões de SC?<span class="ico">+</span></button>
-          <div class="ans"><p>Atendemos toda a região de Santa Catarina, incluindo a Grande Florianópolis, Vale do Itajaí, Norte e Sul do estado.</p></div>
+          <button aria-expanded="false">Vocês atendem em quais cidades?<span class="ico">+</span></button>
+          <div class="ans"><p>Atendemos Balneário Camboriú, Camboriú, Itapema e Itajaí.</p></div>
         </div>
         <div class="q">
           <button aria-expanded="false">Quais tipos de veículos vocês transportam?<span class="ico">+</span></button>
@@ -560,14 +635,13 @@
       <span class="ring" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2 1c1 2 3 4 5 5l1-2 5 2v3c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
       <h3>Precisou de guincho?</h3>
       <p>Fale com a gente agora mesmo!</p>
-      <a href="https://wa.me/5511994721326" class="btn btn-red btn-block" target="_blank" rel="noopener">
+      <a href="https://wa.me/554796816589" class="btn btn-red btn-block" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.2.1.4.1.6-.1l.8-.9c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4.1.2.1.7-.1 1.4Z"/></svg>
         Chamar no WhatsApp
       </a>
-      <a href="tel:+5511994721326" class="btn btn-ghost btn-block">Ligar agora</a>
       <div class="cta-mini">
         <div><b>24h</b><span>Atendimento</span></div>
-        <div><b>SC</b><span>Todo o estado</span></div>
+        <div><b>4</b><span>Cidades atendidas</span></div>
       </div>
     </aside>
   </div>
@@ -583,9 +657,8 @@
       </a>
       <p>Soluções em transporte e guincho com agilidade, segurança e preço justo.</p>
       <div class="socials">
-        <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
-        <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2 0-3.5 1.5-3.5 3.5V11H8v3h2.5v7h3v-7H16l.5-3h-3V9.5c0-.3.2-.5.5-.5Z"/></svg></a>
-        <a href="https://wa.me/5511994721326" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.2.1.4.1.6-.1l.8-.9c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4.1.2.1.7-.1 1.4Z"/></svg></a>
+        <a href="https://www.instagram.com/guincho.speed/" class="ig" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+        <a href="https://wa.me/554796816589" class="wa" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.2.1.4.1.6-.1l.8-.9c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4.1.2.1.7-.1 1.4Z"/></svg></a>
       </div>
     </div>
     <div>
@@ -593,7 +666,6 @@
       <ul>
         <li><a href="#topo">Início</a></li>
         <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#como">Como funciona</a></li>
         <li><a href="#sobre">Sobre nós</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
@@ -601,16 +673,16 @@
     <div>
       <h4>Serviços</h4>
       <ul>
-        <li><a href="#servicos">Guincho leve e pesado</a></li>
-        <li><a href="#servicos">Transporte longa distância</a></li>
-        <li><a href="#servicos">Atendimento 24h</a></li>
+        <li><a href="#servicos">Guincho 24h</a></li>
+        <li><a href="#servicos">Veículos e bens especiais</a></li>
+        <li><a href="#servicos">Todos os tipos de veículos</a></li>
       </ul>
     </div>
     <div class="contact">
       <h4>Contato</h4>
-      <div><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2 1c1 2 3 4 5 5l1-2 5 2v3c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><a href="tel:+5511994721326">(11) 9 9472-1326</a></div>
+      <div><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2 1c1 2 3 4 5 5l1-2 5 2v3c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><a href="tel:+554796816589">(47) 9 9681-65896</a></div>
       <div><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Atendimento 24 horas</div>
-      <div><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>Santa Catarina - SC</div>
+      <div><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>Balneário Camboriú, Camboriú, Itapema e Itajaí - SC</div>
     </div>
   </div>
   <div class="wrap copy">
@@ -620,8 +692,17 @@
 
 <!-- ===================== BARRA FIXA MOBILE ===================== -->
 <div class="callbar">
-  <a href="tel:+5511994721326" class="c-call"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2 1c1 2 3 4 5 5l1-2 5 2v3c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>Ligar</a>
-  <a href="https://wa.me/5511994721326" class="c-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.2.1.4.1.6-.1l.8-.9c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4.1.2.1.7-.1 1.4Z"/></svg>WhatsApp</a>
+  <a href="tel:+554796816589" class="c-call"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2 1c1 2 3 4 5 5l1-2 5 2v3c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>Ligar</a>
+  <a href="https://wa.me/554796816589" class="c-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.2.1.4.1.6-.1l.8-.9c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4.1.2.1.7-.1 1.4Z"/></svg>WhatsApp</a>
+</div>
+
+<!-- ===================== LIGHTBOX GALERIA ===================== -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Galeria de fotos">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <img class="lb-img" id="lbImg" src="" alt="Foto do trabalho da SpeedWay">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <span class="lb-count" id="lbCount"></span>
 </div>
 
 <script>
@@ -675,6 +756,46 @@
       }
     });
   });
+
+  // galeria + lightbox
+  (function () {
+    const items = Array.from(document.querySelectorAll('.g-item'));
+    const lb = document.getElementById('lightbox');
+    if (!items.length || !lb) return;
+    const lbImg = document.getElementById('lbImg');
+    const lbCount = document.getElementById('lbCount');
+    const srcs = items.map(it => it.querySelector('img').getAttribute('src'));
+    let idx = 0;
+
+    function show(i) {
+      idx = (i + srcs.length) % srcs.length;
+      lbImg.src = srcs[idx];
+      lbCount.textContent = (idx + 1) + ' / ' + srcs.length;
+    }
+    function open(i) {
+      show(i);
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    function close() {
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    items.forEach((it, i) => it.addEventListener('click', () => open(i)));
+    document.getElementById('lbClose').addEventListener('click', close);
+    document.getElementById('lbPrev').addEventListener('click', e => { e.stopPropagation(); show(idx - 1); });
+    document.getElementById('lbNext').addEventListener('click', e => { e.stopPropagation(); show(idx + 1); });
+    lb.addEventListener('click', e => { if (e.target === lb) close(); });
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') show(idx - 1);
+      else if (e.key === 'ArrowRight') show(idx + 1);
+    });
+  })();
 </script>
 </body>
 </html>
