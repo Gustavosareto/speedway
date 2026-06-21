@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeedWay — Guincho 24h e Transporte de Veículos em SC</title>
+<meta name="description" content="Guincho leve e pesado, transporte de longa distância e atendimento 24 horas em toda Santa Catarina. Atendimento rápido, seguro e com o melhor preço. Chame agora.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#080B12;
+    --bg-2:#0B0F18;
+    --panel:#11161F;
+    --panel-2:#161C28;
+    --line:rgba(255,255,255,.07);
+    --line-2:rgba(255,255,255,.13);
+    --red:#E1232B;
+    --red-2:#F5333B;
+    --red-dark:#A30F16;
+    --blue:#2563EB;
+    --blue-2:#3B82F6;
+    --gold:#FBBF24;
+    --text:#F3F5F9;
+    --muted:#98A2B3;
+    --white:#FFFFFF;
+    --radius:16px;
+    --maxw:1200px;
+    --shadow:0 24px 60px -24px rgba(0,0,0,.8);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:90px}
+  body{
+    font-family:"Inter",system-ui,-apple-system,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{font-family:"Sora",sans-serif;line-height:1.12;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--red);color:#fff}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+  .eyebrow{
+    font-family:"Inter";font-weight:700;font-size:.74rem;letter-spacing:.24em;
+    text-transform:uppercase;color:var(--red-2);margin-bottom:14px;display:block;
+  }
+  .center{text-align:center}
+  .sec-title{font-size:clamp(1.85rem,3.6vw,2.7rem);font-weight:800;margin-bottom:16px}
+  .sec-sub{color:var(--muted);max-width:600px;margin:0 auto;font-size:1.02rem}
+
+  /* ===== BOTÕES ===== */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;justify-content:center;
+    font-family:"Sora";font-weight:700;font-size:.97rem;
+    padding:15px 26px;border-radius:12px;cursor:pointer;border:1.5px solid transparent;
+    transition:transform .15s ease, background .2s ease, box-shadow .2s ease, border-color .2s ease;
+    white-space:nowrap;
+  }
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn-red{background:var(--red);color:#fff;box-shadow:0 14px 34px -14px rgba(225,35,43,.85)}
+  .btn-red:hover{background:var(--red-2);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--text);border-color:var(--line-2)}
+  .btn-ghost:hover{border-color:#fff;transform:translateY(-2px)}
+  .btn-sm{padding:11px 18px;font-size:.9rem}
+  .btn-block{width:100%}
+
+  /* ===== HEADER ===== */
+  header{position:sticky;top:0;z-index:60;background:rgba(8,11,18,.86);
+    backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:24px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo .mark{width:42px;height:42px;border-radius:11px;display:grid;place-items:center;flex:none;
+    background:linear-gradient(135deg,var(--red),#82080f);box-shadow:0 10px 24px -10px rgba(225,35,43,.9)}
+  .logo .mark svg{width:24px;height:24px}
+  .logo .txt b{font-family:"Sora";font-weight:800;font-size:1.05rem;letter-spacing:.01em;display:block;line-height:1.05}
+  .logo .txt span{font-family:"Inter";font-weight:600;font-size:.56rem;letter-spacing:.3em;
+    color:var(--muted);text-transform:uppercase;display:block;margin-top:3px}
+  nav.links{display:flex;align-items:center;gap:34px}
+  nav.links a{font-size:.95rem;font-weight:500;color:var(--muted);transition:color .15s}
+  nav.links a:hover{color:#fff}
+  .nav-cta{display:flex;align-items:center;gap:14px}
+  .menu-btn{display:none;background:none;border:1px solid var(--line-2);border-radius:10px;
+    width:46px;height:46px;cursor:pointer;color:#fff}
+  .menu-btn svg{width:22px;height:22px;margin:0 auto}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;overflow:hidden;background:
+      radial-gradient(820px 560px at 86% 36%, rgba(225,35,43,.22), transparent 60%),
+      radial-gradient(700px 520px at 4% 8%, rgba(37,99,235,.10), transparent 58%),
+      var(--bg);
+  }
+  .hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image:radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size:26px 26px;mask-image:linear-gradient(180deg,transparent,#000 35%,#000 70%,transparent)}
+  .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.02fr .98fr;
+    gap:40px;align-items:center;padding:70px 0 88px}
+  .pill{display:inline-flex;align-items:center;gap:9px;background:var(--panel);
+    border:1px solid var(--line-2);border-radius:999px;padding:8px 16px;font-size:.82rem;font-weight:600;
+    letter-spacing:.04em;margin-bottom:24px}
+  .pill .dot{width:8px;height:8px;border-radius:50%;background:#39d36a;
+    box-shadow:0 0 0 0 rgba(57,211,106,.6);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(57,211,106,.55)}70%{box-shadow:0 0 0 10px rgba(57,211,106,0)}100%{box-shadow:0 0 0 0 rgba(57,211,106,0)}}
+  .hero h1{font-size:clamp(2.5rem,5.6vw,4.1rem);font-weight:800;margin-bottom:22px}
+  .hero h1 .red{color:var(--red-2)}
+  .hero p.lead{font-size:1.08rem;color:#c4cbd6;max-width:520px;margin-bottom:32px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+  .hero-stats{display:flex;gap:30px;flex-wrap:wrap}
+  .hero-stats .st{display:flex;align-items:center;gap:10px;font-size:.92rem;font-weight:600;color:#d6dbe4}
+  .hero-stats .st svg{width:20px;height:20px;color:var(--red-2);flex:none}
+
+  .hero-art{position:relative;display:grid;place-items:center}
+  .hero-art .glow{position:absolute;width:86%;height:70%;left:50%;top:50%;transform:translate(-50%,-50%);
+    background:radial-gradient(circle,rgba(225,35,43,.35),transparent 66%);filter:blur(26px);z-index:0}
+  .hero-art img{position:relative;z-index:1;width:100%;max-width:600px;height:auto;
+    filter:drop-shadow(0 34px 44px rgba(0,0,0,.6))}
+
+  /* ===== SECTIONS ===== */
+  section{position:relative}
+  .pad{padding:90px 0}
+
+  /* ===== SOLUÇÕES ===== */
+  .solucoes{background:var(--bg-2)}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:54px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px 26px;transition:transform .18s ease,border-color .18s ease;
+    display:flex;flex-direction:column;text-align:left}
+  .card:hover{transform:translateY(-6px);border-color:rgba(37,99,235,.5)}
+  .card .ic{width:58px;height:58px;border-radius:15px;display:grid;place-items:center;margin-bottom:22px;
+    background:linear-gradient(135deg,var(--blue-2),var(--blue));box-shadow:0 14px 30px -14px rgba(37,99,235,.8)}
+  .card .ic svg{width:28px;height:28px;color:#fff}
+  .card h3{font-size:1.14rem;font-weight:700;margin-bottom:11px}
+  .card p{font-size:.93rem;color:var(--muted);flex:1}
+
+  /* ===== COMO FUNCIONA ===== */
+  .como{background:var(--bg)}
+  .como-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap}
+  .como-head .sec-title{margin-bottom:12px}
+  .como-head p{color:var(--muted);max-width:460px}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:64px;position:relative}
+  .steps::before{content:"";position:absolute;top:38px;left:12%;right:12%;height:0;
+    border-top:2px dashed rgba(255,255,255,.16);z-index:0}
+  .step{position:relative;z-index:1;text-align:center;display:flex;flex-direction:column;align-items:center}
+  .step .node{width:78px;height:78px;border-radius:50%;display:grid;place-items:center;
+    background:var(--panel-2);border:1px solid var(--line-2);margin-bottom:20px;position:relative}
+  .step .node svg{width:32px;height:32px;color:#9aa3b3}
+  .step .num{font-family:"Sora";font-weight:800;font-size:1.75rem;color:rgba(225,35,43,.14);
+    -webkit-text-stroke:2px var(--red);text-shadow:0 0 12px rgba(225,35,43,.25);
+    line-height:1;margin-bottom:8px;display:block}
+  .step h3{font-size:1.08rem;font-weight:700;margin-bottom:7px}
+  .step p{font-size:.88rem;color:var(--muted);max-width:220px}
+
+  /* ===== QUALIDADE ===== */
+  .qualidade{background:var(--bg-2)}
+  .quality-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:54px;
+    border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);overflow:hidden}
+  .quality-item{display:flex;align-items:center;gap:20px;padding:36px 34px;border-right:1px solid var(--line)}
+  .quality-item:last-child{border-right:none}
+  .quality-item .qic{width:64px;height:64px;border-radius:50%;border:1.5px solid var(--line-2);
+    display:grid;place-items:center;flex:none}
+  .quality-item .qic svg{width:30px;height:30px;color:var(--red-2)}
+  .quality-item h3{font-size:1.12rem;font-weight:700;margin-bottom:5px}
+  .quality-item p{font-size:.9rem;color:var(--muted)}
+
+  /* ===== REGIÃO + DEPOIMENTOS ===== */
+  .reg-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:30px;align-items:stretch}
+  .region-card{position:relative;border-radius:20px;overflow:hidden;padding:44px 40px;min-height:380px;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    background:linear-gradient(150deg,#1d4ed8 0%,#5b21b6 52%,#9d174d 100%);box-shadow:var(--shadow)}
+  .region-card .eyebrow{color:rgba(255,255,255,.8)}
+  .region-card h3{font-size:2.3rem;font-weight:800;color:#fff;margin-bottom:14px}
+  .region-card p{color:rgba(255,255,255,.9);max-width:330px;font-size:.96rem}
+
+  .reviews-head .sec-title{margin-bottom:0}
+  .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  .review{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;
+    display:flex;flex-direction:column}
+  .review .quote{font-family:Georgia,serif;font-size:3rem;line-height:.6;color:var(--red);height:24px;margin-bottom:10px}
+  .review p{font-size:.92rem;color:#cdd3dd;flex:1;margin-bottom:18px}
+  .review .who{font-family:"Sora";font-weight:700;font-size:.96rem;margin-bottom:2px}
+  .review .city{font-size:.78rem;color:var(--muted);margin-bottom:8px}
+  .review .stars{color:var(--gold);letter-spacing:2px;font-size:.92rem}
+  .dots{display:flex;gap:8px;justify-content:center;margin-top:26px}
+  .dots span{width:9px;height:9px;border-radius:50%;background:var(--line-2)}
+  .dots span.on{background:var(--red);width:24px;border-radius:5px}
+
+  /* ===== FAQ + CTA ===== */
+  .faqcta{background:var(--bg-2)}
+  .faq-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start}
+  .faq{margin-top:8px}
+  .q{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+  .q button{width:100%;background:none;border:none;color:var(--text);cursor:pointer;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding:18px 20px;font-family:"Sora";font-weight:600;font-size:1rem;text-align:left}
+  .q .ico{flex:none;width:26px;height:26px;border-radius:7px;background:rgba(225,35,43,.14);
+    display:grid;place-items:center;transition:transform .25s ease;color:var(--red-2);font-weight:700;font-size:1.2rem}
+  .q.open .ico{transform:rotate(45deg)}
+  .q .ans{max-height:0;overflow:hidden;transition:max-height .3s ease}
+  .q .ans p{padding:0 20px 20px;color:var(--muted);font-size:.94rem}
+
+  .cta-card{background:linear-gradient(165deg,var(--panel-2),var(--panel));border:1px solid var(--line);
+    border-radius:20px;padding:40px 34px;text-align:center;box-shadow:var(--shadow)}
+  .cta-card .ring{width:92px;height:92px;border-radius:50%;margin:0 auto 24px;display:grid;place-items:center;
+    background:var(--red);box-shadow:0 0 0 10px rgba(225,35,43,.16),0 18px 40px -14px rgba(225,35,43,.8)}
+  .cta-card .ring svg{width:40px;height:40px;color:#fff}
+  .cta-card h3{font-size:1.7rem;font-weight:800;margin-bottom:8px}
+  .cta-card p{color:var(--muted);margin-bottom:26px}
+  .cta-card .btn{margin-bottom:12px}
+  .cta-mini{display:flex;justify-content:center;gap:26px;margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}
+  .cta-mini div b{font-family:"Sora";display:block;font-size:1.02rem}
+  .cta-mini div span{font-size:.78rem;color:var(--muted)}
+
+  /* ===== FOOTER ===== */
+  footer{background:#06080D;border-top:1px solid var(--line)}
+  .foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:40px;padding:60px 0 44px}
+  .foot p{color:var(--muted);font-size:.92rem;max-width:300px;margin-top:18px}
+  .foot h4{font-family:"Sora";font-weight:700;font-size:1rem;margin-bottom:20px;color:#fff}
+  .foot ul{list-style:none}
+  .foot ul li{margin-bottom:12px}
+  .foot ul a{color:var(--muted);font-size:.93rem}
+  .foot ul a:hover{color:#fff}
+  .foot .contact div{display:flex;align-items:center;gap:11px;color:var(--muted);margin-bottom:14px;font-size:.93rem}
+  .foot .contact svg{width:18px;height:18px;color:var(--red-2);flex:none}
+  .socials{display:flex;gap:12px;margin-top:22px}
+  .socials a{width:42px;height:42px;border-radius:11px;background:var(--red);display:grid;place-items:center}
+  .socials a svg{width:20px;height:20px;color:#fff}
+  .socials a:hover{background:var(--red-dark)}
+  .copy{border-top:1px solid var(--line);padding:22px 0;display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:8px;color:var(--muted);font-size:.84rem}
+  .copy .heart{color:var(--red-2)}
+
+  /* ===== BARRA FIXA MOBILE ===== */
+  .callbar{position:fixed;left:0;right:0;bottom:0;z-index:80;display:none;
+    grid-template-columns:1fr 1fr;gap:1px;background:var(--line);box-shadow:0 -8px 30px rgba(0,0,0,.5)}
+  .callbar a{display:flex;align-items:center;justify-content:center;gap:9px;
+    padding:15px;font-family:"Sora";font-weight:700;font-size:.95rem}
+  .callbar a svg{width:19px;height:19px}
+  .callbar .c-call{background:var(--panel);color:#fff}
+  .callbar .c-wa{background:#1faf55;color:#fff}
+
+  .mobile-menu{display:none;flex-direction:column;padding:8px 26px 20px;
+    border-bottom:1px solid var(--line);background:var(--bg)}
+  .mobile-menu.show{display:flex}
+  .mobile-menu a{padding:13px 4px;color:var(--muted);font-weight:500;border-bottom:1px solid var(--line)}
+  .mobile-menu a:last-child{border:none}
+
+  /* ===== RESPONSIVO ===== */
+  @media(max-width:1040px){
+    .cards{grid-template-columns:repeat(2,1fr)}
+    .steps{grid-template-columns:repeat(2,1fr);gap:40px 24px}
+    .steps::before{display:none}
+    .quality-row{grid-template-columns:1fr}
+    .quality-item{border-right:none;border-bottom:1px solid var(--line)}
+    .quality-item:last-child{border-bottom:none}
+    .reg-grid{grid-template-columns:1fr}
+    .review-grid{grid-template-columns:1fr}
+    .faq-grid{grid-template-columns:1fr}
+    .foot{grid-template-columns:1fr 1fr}
+    nav.links{display:none}
+    .nav-cta .btn-phone-text{display:none}
+    .menu-btn{display:grid}
+  }
+  @media(max-width:860px){
+    .hero-grid{grid-template-columns:1fr;gap:26px;padding:34px 0 50px}
+    .hero-art{max-width:430px;margin:0 auto;order:2}
+    .hero p.lead{margin-bottom:26px}
+  }
+  @media(max-width:620px){
+    .wrap{padding:0 20px}
+    .pad{padding:54px 0}
+    .cards{grid-template-columns:1fr;gap:16px;margin-top:34px}
+    .steps{grid-template-columns:1fr;gap:28px;margin-top:38px}
+    .review-grid{grid-template-columns:1fr;gap:14px;margin-top:26px}
+    .faq-grid{gap:30px}
+    .callbar{display:grid}
+    body{padding-bottom:60px}
+    .sec-title{font-size:clamp(1.65rem,7vw,2.1rem)}
+    .sec-sub{font-size:.96rem}
+    .hero h1{font-size:clamp(2.05rem,8.8vw,2.9rem)}
+    .hero p.lead{font-size:1.02rem}
+    .hero-cta{flex-direction:column;gap:12px}
+    .hero-cta .btn{width:100%}
+    .hero-stats{gap:14px 20px}
+    .como-head{flex-direction:column;align-items:flex-start;gap:18px}
+    .como-head .btn{width:100%}
+    .step p{max-width:280px}
+    .region-card{min-height:270px;padding:34px 26px}
+    .region-card h3{font-size:2rem}
+    .review{padding:22px 20px}
+    .quality-item{padding:24px 22px}
+    .cta-card{padding:34px 22px}
+    .cta-card h3{font-size:1.5rem}
+    .cta-card .ring{width:80px;height:80px;margin-bottom:20px}
+    .cta-card .ring svg{width:34px;height:34px}
+  }
+  @media(max-width:430px){
+    .nav{height:64px;gap:12px}
+    .logo .mark{width:38px;height:38px}
+    .logo .txt b{font-size:.92rem}
+    .pad{padding:46px 0}
+    .hero h1{font-size:clamp(1.9rem,8.4vw,2.4rem)}
+    .foot{grid-template-columns:1fr;gap:28px}
+    .copy{flex-direction:column;justify-content:center;text-align:center;gap:5px}
+    .cta-mini{gap:30px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <div class="wrap nav">
+    <a href="#topo" class="logo" aria-label="SpeedWay - início">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 13h9V7H3v6Zm9 0h4l3 3M12 13V7m0 6h7" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="17" r="2" stroke="#fff" stroke-width="1.8"/><circle cx="17" cy="17" r="2" stroke="#fff" stroke-width="1.8"/></svg>
+      </span>
+      <span class="txt"><b>SpeedWay</b><span>Transporte &amp; Guincho</span></span>
+    </a>
+
+    <nav class="links" aria-label="Navegação principal">
+      <a href="#topo">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#como">Como funciona</a>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="tel:+5511994721326" class="btn btn-red btn-sm">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2 1c1 2 3 4 5 5l1-2 5 2v3c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+        <span class="btn-phone-text">(11) 9 9472-1326</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#topo">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#como">Como funciona</a>
+    <a href="#sobre">Sobre nós</a>
+    <a href="#contato">Contato</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="topo">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="pill"><span class="dot" aria-hidden="true"></span>Atendimento 24h</span>
+      <h1>Precisou de guincho?<br><span class="red">A gente resolve.</span></h1>
+      <p class="lead">Atendimento rápido, seguro e com o melhor preço. Estamos prontos para te ajudar 24 horas, esteja onde estiver na cidade. Atendemos toda a região de Santa Catarina.</p>
+      <div class="hero-cta">
+        <a href="https://wa.me/5511994721326" class="btn btn-red" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.2.1.4.1.6-.1l.8-.9c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4.1.2.1.7-.1 1.4Z"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats">
+        <span class="st"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Atendimento 24h</span>
+        <span class="st"><svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>Chegada rápida</span>
+        <span class="st"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v10M9.5 9.2c0-1 .9-1.7 2.5-1.7s2.4.7 2.4 1.6c0 2.3-4.8 1.4-4.8 3.8 0 1 .9 1.6 2.4 1.6s2.5-.7 2.5-1.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Preço justo</span>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <span class="glow" aria-hidden="true"></span>
+      <img src="caminhao-hero.png" alt="Caminhão guincho plataforma transportando um carro" width="600" height="400" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOLUÇÕES ===================== -->
+<section class="solucoes pad" id="servicos">
+  <div class="wrap center">
+    <span class="eyebrow">Soluções completas</span>
+    <h2 class="sec-title">Soluções completas para você</h2>
+    <p class="sec-sub">Do carro de passeio ao caminhão pesado — atendimento rápido, equipamento certo e cuidado em cada serviço.</p>
+
+    <div class="cards">
+      <article class="card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 13l1.5-5h9v5M13 13h4l3 3v1M3 13v4M3 17h2m12 0h2" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" stroke="#fff" stroke-width="1.7"/><circle cx="17" cy="18" r="2" stroke="#fff" stroke-width="1.7"/></svg></span>
+        <h3>Guincho leve e pesado</h3>
+        <p>Atendemos carros, motos, vans e caminhões com rapidez e total segurança.</p>
+      </article>
+      <article class="card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18c-3 0-5-1.3-5-3.5S6 11 9 11h6c2 0 3.5-1 3.5-2.5S16 6 14 6H7" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 4 7 6 5 8" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="18" r="2.2" stroke="#fff" stroke-width="1.7"/></svg></span>
+        <h3>Transporte longa distância</h3>
+        <p>Levamos seu veículo para qualquer lugar do Brasil com segurança e eficiência.</p>
+      </article>
+      <article class="card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.7"/><path d="M12 7v5l3.5 2" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Atendimento 24 horas</h3>
+        <p>Disponíveis todos os dias, inclusive finais de semana e feriados.</p>
+      </article>
+      <article class="card">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 5 6v5c0 4.4 3 8 7 10 4-2 7-5.6 7-10V6l-7-3Z" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <h3>Segurança e confiabilidade</h3>
+        <p>Profissionais qualificados e equipamentos modernos para cuidar do seu veículo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMO FUNCIONA ===================== -->
+<section class="como pad" id="como">
+  <div class="wrap">
+    <div class="como-head">
+      <div>
+        <span class="eyebrow">Como funciona</span>
+        <h2 class="sec-title">É rápido, fácil<br>e sem complicação.</h2>
+        <p>Da sua ligação até o veículo no destino, você acompanha cada etapa do atendimento.</p>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span class="node"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2 1c1 2 3 4 5 5l1-2 5 2v3c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+        <span class="num">01</span>
+        <h3>Você chama</h3>
+        <p>Ligue ou mande mensagem no WhatsApp.</p>
+      </div>
+      <div class="step">
+        <span class="node"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 11v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="8" r="1.2" fill="currentColor"/></svg></span>
+        <span class="num">02</span>
+        <h3>Informações</h3>
+        <p>Conte onde está e o tipo de veículo.</p>
+      </div>
+      <div class="step">
+        <span class="node"><svg viewBox="0 0 24 24" fill="none"><path d="M3 13l1.5-5h9v5M13 13h4l3 3v1M3 13v4" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/><circle cx="17" cy="18" r="2" stroke="currentColor" stroke-width="1.7"/></svg></span>
+        <span class="num">03</span>
+        <h3>Enviamos o guincho</h3>
+        <p>A unidade mais próxima vai até você.</p>
+      </div>
+      <div class="step">
+        <span class="node"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="m8 12 2.5 2.5L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="num">04</span>
+        <h3>Problema resolvido</h3>
+        <p>Seu veículo no destino com segurança.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUALIDADE ===================== -->
+<section class="qualidade pad" id="sobre">
+  <div class="wrap center">
+    <span class="eyebrow">Por que escolher a gente</span>
+    <h2 class="sec-title">Qualidade que faz a diferença</h2>
+
+    <div class="quality-row">
+      <div class="quality-item">
+        <span class="qic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09Z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2Z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span>
+        <div style="text-align:left">
+          <h3>Agilidade</h3>
+          <p>Chegamos rápido até você, onde estiver.</p>
+        </div>
+      </div>
+      <div class="quality-item">
+        <span class="qic"><svg viewBox="0 0 24 24" fill="none"><text x="12" y="16.5" text-anchor="middle" font-family="Sora, Arial, sans-serif" font-weight="800" font-size="11" fill="currentColor">R$</text></svg></span>
+        <div style="text-align:left">
+          <h3>Preço justo</h3>
+          <p>Valores acessíveis e sem surpresas.</p>
+        </div>
+      </div>
+      <div class="quality-item">
+        <span class="qic"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="3" stroke="currentColor" stroke-width="1.6"/><circle cx="16.5" cy="10" r="2.3" stroke="currentColor" stroke-width="1.6"/><path d="M3.5 18c0-2.5 2.5-4 5.5-4s5.5 1.5 5.5 4M15 14.4c2.6.2 5 1.6 5 3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <div style="text-align:left">
+          <h3>Equipe especializada</h3>
+          <p>Profissionais experientes prontos para te ajudar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REGIÃO + DEPOIMENTOS ===================== -->
+<section class="pad">
+  <div class="wrap reg-grid">
+    <aside class="region-card">
+      <span class="eyebrow">Atendemos toda a</span>
+      <h3>Santa Catarina</h3>
+      <p>Estamos presentes em toda a região de SC, prontos para te atender 24 horas com rapidez e total segurança.</p>
+    </aside>
+
+    <div class="reviews-head">
+      <span class="eyebrow">Quem já confia</span>
+      <h2 class="sec-title">Nossos clientes recomendam</h2>
+
+      <div class="review-grid">
+        <div class="review">
+          <span class="quote" aria-hidden="true">&rdquo;</span>
+          <p>Atendimento rápido e profissional. Chegaram em menos de 30 minutos!</p>
+          <span class="who">Carlos M.</span>
+          <span class="city">Florianópolis - SC</span>
+          <span class="stars" aria-label="5 de 5 estrelas">★★★★★</span>
+        </div>
+        <div class="review">
+          <span class="quote" aria-hidden="true">&rdquo;</span>
+          <p>Excelente serviço! Transportaram meu carro com total segurança.</p>
+          <span class="who">Juliana S.</span>
+          <span class="city">Joinville - SC</span>
+          <span class="stars" aria-label="5 de 5 estrelas">★★★★★</span>
+        </div>
+        <div class="review">
+          <span class="quote" aria-hidden="true">&rdquo;</span>
+          <p>Precisei de madrugada e fui muito bem atendido. Recomendo!</p>
+          <span class="who">Rafael T.</span>
+          <span class="city">Blumenau - SC</span>
+          <span class="stars" aria-label="5 de 5 estrelas">★★★★★</span>
+        </div>
+      </div>
+      <div class="dots" aria-hidden="true"><span class="on"></span><span></span><span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ + CTA ===================== -->
+<section class="faqcta pad" id="contato">
+  <div class="wrap faq-grid">
+    <div>
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2 class="sec-title">Respostas para as perguntas mais comuns</h2>
+
+      <div class="faq" id="faqList">
+        <div class="q">
+          <button aria-expanded="false">Qual o tempo médio de chegada do guincho?<span class="ico">+</span></button>
+          <div class="ans"><p>O tempo varia conforme sua localização e o trânsito, mas trabalhamos para chegar o mais rápido possível. Ao confirmar o chamado passamos uma estimativa de chegada.</p></div>
+        </div>
+        <div class="q">
+          <button aria-expanded="false">Vocês atendem em quais regiões de SC?<span class="ico">+</span></button>
+          <div class="ans"><p>Atendemos toda a região de Santa Catarina, incluindo a Grande Florianópolis, Vale do Itajaí, Norte e Sul do estado.</p></div>
+        </div>
+        <div class="q">
+          <button aria-expanded="false">Quais tipos de veículos vocês transportam?<span class="ico">+</span></button>
+          <div class="ans"><p>Transportamos carros, motos, vans, pickups e caminhões. Temos plataforma adequada para guincho leve e pesado.</p></div>
+        </div>
+        <div class="q">
+          <button aria-expanded="false">Aceitam cartões ou PIX?<span class="ico">+</span></button>
+          <div class="ans"><p>Sim. Aceitamos PIX, dinheiro, cartão de débito e crédito. O valor é combinado antes do serviço, sem surpresas.</p></div>
+        </div>
+        <div class="q">
+          <button aria-expanded="false">O serviço funciona 24 horas?<span class="ico">+</span></button>
+          <div class="ans"><p>Sim, atendemos 24 horas por dia, todos os dias da semana, inclusive feriados.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="cta-card">
+      <span class="ring" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2 1c1 2 3 4 5 5l1-2 5 2v3c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+      <h3>Precisou de guincho?</h3>
+      <p>Fale com a gente agora mesmo!</p>
+      <a href="https://wa.me/5511994721326" class="btn btn-red btn-block" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.2.1.4.1.6-.1l.8-.9c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4.1.2.1.7-.1 1.4Z"/></svg>
+        Chamar no WhatsApp
+      </a>
+      <a href="tel:+5511994721326" class="btn btn-ghost btn-block">Ligar agora</a>
+      <div class="cta-mini">
+        <div><b>24h</b><span>Atendimento</span></div>
+        <div><b>SC</b><span>Todo o estado</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a href="#topo" class="logo">
+        <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 13h9V7H3v6Zm9 0h4l3 3M12 13V7m0 6h7" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="17" r="2" stroke="#fff" stroke-width="1.8"/><circle cx="17" cy="17" r="2" stroke="#fff" stroke-width="1.8"/></svg></span>
+        <span class="txt"><b>SpeedWay</b><span>Transporte &amp; Guincho</span></span>
+      </a>
+      <p>Soluções em transporte e guincho com agilidade, segurança e preço justo.</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2 0-3.5 1.5-3.5 3.5V11H8v3h2.5v7h3v-7H16l.5-3h-3V9.5c0-.3.2-.5.5-.5Z"/></svg></a>
+        <a href="https://wa.me/5511994721326" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.2.1.4.1.6-.1l.8-.9c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4.1.2.1.7-.1 1.4Z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Links rápidos</h4>
+      <ul>
+        <li><a href="#topo">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#como">Como funciona</a></li>
+        <li><a href="#sobre">Sobre nós</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="#servicos">Guincho leve e pesado</a></li>
+        <li><a href="#servicos">Transporte longa distância</a></li>
+        <li><a href="#servicos">Atendimento 24h</a></li>
+      </ul>
+    </div>
+    <div class="contact">
+      <h4>Contato</h4>
+      <div><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2 1c1 2 3 4 5 5l1-2 5 2v3c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><a href="tel:+5511994721326">(11) 9 9472-1326</a></div>
+      <div><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Atendimento 24 horas</div>
+      <div><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.6 7-11a7 7 0 0 0-14 0c0 5.4 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>Santa Catarina - SC</div>
+    </div>
+  </div>
+  <div class="wrap copy">
+    <span>© <span id="ano"></span> SpeedWay Guincho. Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+<!-- ===================== BARRA FIXA MOBILE ===================== -->
+<div class="callbar">
+  <a href="tel:+5511994721326" class="c-call"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l2 5-2 1c1 2 3 4 5 5l1-2 5 2v3c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>Ligar</a>
+  <a href="https://wa.me/5511994721326" class="c-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.2.1.4.1.6-.1l.8-.9c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4.1.2.1.7-.1 1.4Z"/></svg>WhatsApp</a>
+</div>
+
+<script>
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    const open = mobileMenu.classList.toggle('show');
+    menuBtn.setAttribute('aria-expanded', open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('show');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    })
+  );
+
+  // rolagem suave em todos os links âncora (navbar, menu, rodapé, logo)
+  const header = document.querySelector('header');
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const hash = link.getAttribute('href');
+      if (!hash || hash === '#') return;
+      const target = document.querySelector(hash);
+      if (!target) return;
+      e.preventDefault();
+      const offset = (header ? header.offsetHeight : 0) + 12;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+      mobileMenu.classList.remove('show');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      history.replaceState(null, '', hash);
+    });
+  });
+
+  document.querySelectorAll('#faqList .q').forEach(item => {
+    const btn = item.querySelector('button');
+    const ans = item.querySelector('.ans');
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('#faqList .q').forEach(o => {
+        o.classList.remove('open');
+        o.querySelector('.ans').style.maxHeight = null;
+        o.querySelector('button').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        ans.style.maxHeight = ans.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+</body>
+</html>
